@@ -1,0 +1,103 @@
+// This will be created by javascipt when user submits the form
+.item{
+    padding: 1rem 1.3rem;
+    border-bottom: 1px solid $light-grayish-blue;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    //COMBINED BOTH DIVS
+    &__check, &__delete{
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        overflow: hidden;
+    }
+    
+    // COMBINED BOTH ICONS
+    &__check-icon, &__delete-icon{
+        display: inline-block;
+        height: 1.5rem;
+        width: 1.5rem;
+    }
+
+    // COMBINED BOTH BUTTONS
+    &__check-button, &__delete-button{
+        cursor: pointer;
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+
+    // TODO CHECK BUTTON
+    &__check{
+        border: 1px solid $dark-grayish-blue;
+        flex-shrink: 0;
+        
+    }
+
+    // TODO TEXT
+    &__text{
+        flex: 1;
+        height: auto;
+        padding: 0 1rem;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        font-size: .875rem;
+    }
+
+    // TODO DELETE BUTTON
+    &__delete{
+        flex-shrink: 0;
+        height: 1.5rem;
+        width: 1.5rem;
+        transition: .3s ease-in;
+        &-icon{
+            background-image: url(../images/icon-cross.svg);
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        &-button{
+            
+        }
+
+        &:hover{
+            transform: scale(1.1);
+        }
+
+    }
+}
+
+.bg-check-button {
+    background-image: url('../images/icon-check.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.bg-check-button2{
+    background: linear-gradient(90deg, #57ddff 0%, #c058f3 100%);
+    border: none;
+}
+
+.completed-text{
+    text-decoration: line-through;
+    color: $dark-grayish-blue;
+}
+
+// Dark theme classes
+.dark-body{
+    background-color: $darker-grayish-blue;
+    color: white;
+    border-color: $dark-grayish-blue;
+}
+.dark-hero{
+    background-image: url(../images/bg-mobile-dark.jpg);
+}
+

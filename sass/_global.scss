@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;700&display=swap');
+
+*, *::after, *::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: $font-family;
+}
+
+ul{
+    list-style: none;
+}
+
+button{
+    background: transparent;
+    border: none;
+}
+
+main{
+    position: relative;
+}
+
+.hero{
+    width: 100%;
+    height: 12.5rem;
+    background-image: url(../images/bg-mobile-light.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.todo-container{
+    width: 90%;
+    max-width: 33.75rem;
+    margin: 0 auto;
+
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.header{
+    margin-bottom: 1.65rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &__title{
+        font-size: 1.8rem;
+        color: white;
+        letter-spacing: 12px;
+    }
+}
+
+.todo{
+    margin-bottom: 1rem;
+
+    &__form{
+        position: relative;
+    }
+
+    &__input{
+        margin-bottom: 2rem;
+        padding: .875rem;
+        padding-right: 4.5rem;
+        border-radius: 5px;
+        border: none;
+        width: 100%;
+        transition: .3s;
+        font-size: .875rem;
+        font-family: $font-family;
+
+        &:focus{
+            outline: none;
+            // transform: scale(1.05);
+        }
+    }
+
+    &__add-btn{
+        position: absolute;
+        right: 0;
+        top: 0;
+        background: linear-gradient(to right, $linear-gradient-blue, $linear-gradient-purple);
+        color: white;
+        // border: 2px solid red;
+        padding: .775rem 1rem;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+        font-size: 1rem;
+        z-index: 10;
+        transition: .3s ease-in;
+
+        &:hover, &:focus{
+            outline: 1px solid black;
+        } 
+    }
+    
+    &__content{
+        border-radius: 0.5rem;
+        background: white;
+        box-shadow: 0 1rem 2.5rem rgba(black, .3);
+        font-size: 1rem;
+    }
+
+    &__options{
+        padding: 1rem 1.3rem;
+        display: flex;
+        justify-content: space-between;
+        color: $dark-grayish-blue;
+    }
+
+    &__clear{
+        cursor: pointer;
+    }
+}

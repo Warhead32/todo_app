@@ -1,0 +1,11 @@
+@media (min-width: 500px){
+    .hero{
+        background-image: url(../images/bg-desktop-light.jpg);
+        height: 15rem;
+        background-position: top;
+    }
+
+    .dark-hero{
+        background-image: url(../images/bg-desktop-dark.jpg);
+    }
+}
